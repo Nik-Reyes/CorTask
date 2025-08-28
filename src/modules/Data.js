@@ -36,6 +36,7 @@ export default class Data {
 				return list;
 			}
 		}
+		return null;
 	}
 
 	get storage() {

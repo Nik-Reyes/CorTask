@@ -646,7 +646,7 @@ export default class App {
 		}
 	}
 
-	deleteAllCompletedTasks(target) {
+	deleteAllCompletedTasks() {
 		const completedTasks = this.elements.taskCollectionWrapper.querySelectorAll('.task-wrapper.completed');
 		completedTasks.forEach(taskWrapper => {
 			const taskIdx = this.getTaskIdxFromElement(taskWrapper);
@@ -662,7 +662,7 @@ export default class App {
 		if (target.closest('.add-task-btn')) {
 			this.addTaskElement(e);
 		} else if (target.closest('.clear-btn')) {
-			this.deleteAllCompletedTasks(target);
+			this.deleteAllCompletedTasks();
 		} else if (e.target.className.includes('expand-collapse')) {
 			const sectionWrapper = target.closest('.section-wrapper');
 			const subCollectionWrapper = sectionWrapper.nextSibling;
